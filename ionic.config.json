@@ -1,0 +1,7 @@
+{
+  "name": "ceylon-doc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
