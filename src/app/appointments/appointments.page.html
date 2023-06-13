@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button> 
+        <ion-icon aria-hidden="true" name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar></ion-searchbar>
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="Days" interface="popover" placeholder="Choose Date">
+        <ion-select-option value="apples">Today</ion-select-option>
+        <ion-select-option value="oranges">All</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-card class="app-card">
+    <ion-card-header>
+      <ion-card-title>Date and Time</ion-card-title>
+      <ion-card-subtitle>Name</ion-card-subtitle>
+      <ion-card-subtitle>Age</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Payment
+    </ion-card-content>
+  
+    <ion-button fill="clear" class="decline-btn">
+      <ion-icon aria-hidden="true" name="close"></ion-icon>
+      Decline
+    </ion-button>
+  </ion-card>
+</ion-content>
