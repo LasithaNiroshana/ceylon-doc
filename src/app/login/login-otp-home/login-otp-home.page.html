@@ -1,13 +1,75 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login-otp-home</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="login-otp-home-content">
+  <ion-grid class="h-100 login-block">
+    <ion-row class="logo-row m5">
+      <ion-col class="content-center">
+        <label class="header-t1 fc-black"><b>Ceylon Doc</b></label>
+      </ion-col>
+    </ion-row>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login-otp-home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-row class="margin-m5">
+      <ion-col class="content-center">
+        <label class="header-t1 fc-black"><b>Hello again!</b></label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="margin-m5">
+      <ion-col class="content-center">
+        <label class="content-t1 fc-black"
+          >Please enter the 6-Digit Security Code below to confirm your
+          identity</label
+        >
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="center-img margin-m2">
+      <div class="mobile-box">
+        <div class="mobile-box-icon center-img">
+          <img
+            src="{{country_img}}"
+            cache-img="country_img"
+            style="height: 3vh"
+          />
+        </div>
+        <div class="mobile-box-text vertical-center-img">
+          <ion-input
+            type="tel"
+            autocomplete="one-time-code"
+            maxlength="6"
+            placeholder="******"
+            mask="******"
+            clearInput
+            class="input-t1"
+          ></ion-input>
+          <!-- <form [formGroup]="loginOTPForm" autocomplete="on">
+            <input id="single-factor-code-text-field" autocomplete="one-time-code" style="font-size: 22px; color: white">
+          </form> -->
+          <!-- <input appWebOtp placeholder="Enter OTP" style="font-size: 22px; color: white"/> -->
+          <!-- <input
+            type="text"
+            name="auth-token"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            autocomplete="one-time-code" 
+            style="font-size: 22px; color: white"
+          /> -->
+        </div>
+        <div (click)="getOTP()" class="mobile-box-btn center-img">
+          <img
+            src="{{login_img}}"
+            cache-img="login_img"
+            class="login-btn-icon"
+          />
+        </div>
+      </div>
+    </ion-row>
+
+    <ion-row class="margin-m2">
+      <ion-col class="content-center ion-no-padding">
+        <span class="content-t1 fc-black">Don't you get OTP?</span>
+        <span class="content-t1 fc-black"> <b>Try Again</b></span>
+        <span class="content-t1fc-black"> or </span>
+        <span class="content-t1 fc-black"></span><b>Resend OTP</b>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

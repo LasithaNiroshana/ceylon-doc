@@ -4,16 +4,22 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
         path: 'appointments',
-        loadChildren: () => import('../appointments/appointments.module').then(m => m.AppointmentsPageModule)
+        loadChildren: () =>
+          import('../appointments/appointments.module').then(
+            (m) => m.AppointmentsPageModule
+          ),
       },
       {
         path: 'payments',
-        loadChildren: () => import('../payments-settlements/payments-settlements.module').then(m => m.PaymentsSettlementsPageModule)
+        loadChildren: () =>
+          import('../payments-settlements/payments-settlements.module').then(
+            (m) => m.PaymentsSettlementsPageModule
+          ),
       },
       // {
       //   path: 'tab3',
@@ -22,15 +28,15 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: '/tabs/appointments',
-        pathMatch: 'full'
-      }
-    ]
+        pathMatch: 'full',
+      },
+    ],
   },
   {
     path: '',
     redirectTo: '/tabs/appointments',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

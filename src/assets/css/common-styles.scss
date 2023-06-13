@@ -1,0 +1,40 @@
+@use "./custom-variables.scss" as c;
+
+//button styles
+.custom-button {
+    --background: c.$custom-color-blue;
+    background-color: c.$custom-color-blue;
+    border-radius: 30px;
+}
+.custom-btn-text {
+    font-size: 0.8em !important;
+    font-weight: bold;
+}
+
+.custom-disabled-button {
+    background-color: c.$custom-color-white;
+    border-radius: 30px;
+    color: c.$custom-color-blue;
+}
+
+//blue text
+.font-blue {
+    color: c.$custom-color-blue !important;
+}
+.font-purple {
+    color: c.$custom-color-purple !important;
+}
+
+//font weight
+.font-bold {
+    font-weight: bold;
+}
+.font-bolder {
+    font-weight: bolder;
+}
+
+@media only screen and (min-width: 768px) {
+    .custom-btn-text {
+        font-size: 1.1em !important;
+    }
+}
