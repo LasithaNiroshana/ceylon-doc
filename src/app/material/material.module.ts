@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HeaderComponent} from './header/header.component';
 import { IonicModule } from '@ionic/angular';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [],
   imports: [
     IonicModule,
     CommonModule,
+    MatTabsModule
   ],
   exports:[
-    HeaderComponent
+    MatTabsModule
   ]
 })
-export class ComponentsModule { }
+export class MaterialModule { }

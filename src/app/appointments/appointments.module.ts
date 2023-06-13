@@ -8,6 +8,7 @@ import { AppointmentsPageRoutingModule } from './appointments-routing.module';
 
 import { AppointmentsPage } from './appointments.page';
 import {ComponentsModule} from '../components/components.module';
+import {MaterialModule} from '../material/material.module'
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {ComponentsModule} from '../components/components.module';
     FormsModule,
     IonicModule,
     AppointmentsPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    MaterialModule
   ],
   declarations: [AppointmentsPage]
 })

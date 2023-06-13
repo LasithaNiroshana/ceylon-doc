@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { PaymentsSettlementsPageRoutingModule } from './payments-settlements-routing.module';
 
 import { PaymentsSettlementsPage } from './payments-settlements.page';
+import {ComponentsModule} from '../components/components.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { PaymentsSettlementsPage } from './payments-settlements.page';
     FormsModule,
     IonicModule,
     PaymentsSettlementsPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [PaymentsSettlementsPage]
 })
