@@ -1,2 +1,109 @@
+.h-100{
+    height: 100vh;
+}
 
+.login-block {
+    background-image: url(../../../assets/imgs/UI/login-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    // background-color: #EEF5FD;
+}
+
+.logo-row{
+    height: 25vh; 
+    margin-top: 20vh;
+    // background-color: yellow;
+}
+
+.logo-col{
+    text-align: center; 
+    // background-color: pink; 
+    height: 100%;
+} 
+
+.content-center{
+    text-align: center;
+}
+
+.center-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-center-img {
+    display: flex;
+    // align-items: center;
+    vertical-align: center;
+    justify-content: center;
+}
+
+.mobile-box{
+    background-color: white; 
+    height: calc(2.5vh + 10vw); 
+    width: 90vw; 
+    border-width: 2px !important;
+    border: solid #a5b3c4;
+    border-radius: 10vh;
+}
+
+.login-btn-icon{
+    height: calc(1.25vh + 5vw); 
+}
+
+.mobile-box-icon{
+    background-color: transparent; 
+    float: left;
+    height: 100%; 
+    width: 20%;
+}
+
+.mobile-box-text{
+    background-color: transparent; 
+    float: left;
+    height: 100%; 
+    width: 60%;
+    font-size: 24px;
+}
+
+.mobile-box-btn{
+    background-color: #559BEA; 
+    float: right;
+    height: calc(2.5vh + 10vw); 
+    width: calc(2.5vh + 10vw); 
+    border-radius: 50px;
+}
+
+.call-box{
+    background-color: transparent; 
+    height: 7.5vh; 
+    width: 90vw; 
+    border-width: 2px !important;
+    border: solid #559BEA;
+    border-radius: 10vh;
+}
+
+.call-box-btn{
+    background-color: #559BEA; 
+    float: left;
+    height: 7.5vh; 
+    width: 7.5vh; 
+    border-radius: 7.5vh;
+}
+
+.call-box-text{
+    background-color: transparent; 
+    float: left;
+    height: 7.5vh; 
+    width: 80%;
+    font-size: 24px;
+    text-align: center;
+}
+
+.center-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 

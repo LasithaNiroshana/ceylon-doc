@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -8,13 +8,16 @@ import { LoginMobileHomePageRoutingModule } from './login-mobile-home-routing.mo
 
 import { LoginMobileHomePage } from './login-mobile-home.page';
 
+// import { IonicInputMaskModule } from '@thiagoprz/ionic-input-mask';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
-    LoginMobileHomePageRoutingModule
+    LoginMobileHomePageRoutingModule,
   ],
-  declarations: [LoginMobileHomePage]
+  declarations: [LoginMobileHomePage],
 })
 export class LoginMobileHomePageModule {}

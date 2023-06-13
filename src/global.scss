@@ -24,3 +24,241 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+.font-white{
+    color: white;
+}
+
+.custom-loader-class{
+    // --background: transparent;
+    --spinner-color:white;
+
+    .loading-wrapper {
+        background: transparent;
+        box-shadow: none;
+      }
+}
+
+ion-button{
+    height: 50px;
+    --box-shadow:none;
+    font-size: 15px;
+}
+
+ion-backdrop {
+    --backdrop-opacity: 0.7;
+}
+
+ion-spinner {
+    transform: scale(5);
+}
+
+.ion-chip-danger {
+    --background: #ff4961;
+}
+
+.ion-chip-primary {
+    --background: #391D4B;
+    // width: 30vw;
+}
+
+.ion-chip-light {
+    --background: #A491B0;
+    // width: 30vw;
+}
+
+.ion-chip-light-blue {
+    --background: #EEF5FD;
+    // width: 30vw;
+}
+
+.ion-chip-blue{
+    --background: #559BEA;
+}
+
+.bg-dark{
+    --background: black;
+    opacity: 0.8;
+}
+
+.bg-ash{
+    --background: #F7F7F7;
+}
+
+.bg-white{
+    --background: white;
+}
+
+.bg-purple{
+    --background: #391D4B;
+}
+
+.bg-warning{
+    --background: #ffd534;
+}
+
+.bg-red{
+    --background: #ff4961;
+}
+
+.bg-blue{
+    --background: #559BEA;
+}
+
+.bg-black{
+    --background: #391D4B !important;
+}
+
+.bg-light-blue{
+    --background: #EEF5FD;
+}
+
+.bg-light-purple{
+    --background: #A491B0;
+}
+
+.bg-color-purple{
+    background-color: #391D4B;
+}
+
+.bg-color-black{
+    background-color: black;
+}
+
+.bg-color-red{
+    background-color: #ff4961;
+}
+
+.bg-color-light-purple{
+    background-color: #A491B0;
+}
+
+.bg-color-light-blue{
+    background-color: #EEF5FD;
+}
+
+.bg-color-blue{
+    background-color: #559BEA;
+}
+
+.bg-color-white{
+    background-color: white;
+}
+
+.fc-purple{
+    color: #391D4B;
+}
+
+.fc-black{
+    color: #343434;
+}
+
+.fc-white{
+    color: white;
+}
+
+.fc-blue{
+    color: #559BEA;
+}
+
+.h-10{
+    height: 10vh;
+}
+
+.h-15{
+    height: 15vh;
+}
+
+.h-20{
+    height: 20vh;
+}
+
+.outline-button {
+	--border-color: #A491B0;
+}
+
+.font-m{
+    font-size: 18px;
+}
+
+ion-alert {
+    --background: white !important;
+
+    .alert-radio-label.sc-ion-alert-md {
+        color: black;
+        font-weight: bold;
+    }
+
+    .sc-ion-alert-md {
+        color: black;
+        font-weight: bold;
+    }
+}
+
+.health-txt{
+    font-size: 18px;
+}
+
+.common-txt{
+    font-size: 18px;
+}
+
+// new scales
+
+.margin-m0{
+    margin-top: 0px;
+}
+
+.margin-m10{
+    margin-top: 10vh;
+}
+
+.margin-m5{
+    margin-top: 5vh;
+}
+
+.margin-m2{
+    margin-top: 2.5vh;
+}
+
+.header-t1{
+    font-size: calc(1.5vh + 3vw);
+}
+
+.header-t2{
+    font-size: calc(1.5vh + 2vw);
+}
+
+.sub-header-w-t1{
+    font-size: calc(0.25vh + 3.5vw);
+}
+
+.sub-header-w-t2{
+    font-size: calc(0.25vh + 2vw);
+}
+
+.sub-header-w-t3{
+    font-size: calc(0.25vh + 1vw);
+}
+
+.sub-header-t1{
+    font-size: calc(1.5vh + 1vw);
+}
+
+.sub-header-t2{
+    font-size: calc(1.25vh + 1vw);
+}
+
+.sub-header-t3{
+    font-size: calc(1vh + 1vw);
+}
+
+.content-t1{
+    font-size: calc(1.5vh + 1.5vw);
+}
+
+.input-t1{
+    font-size: calc(2vh + 1.5vw);
+}
+
