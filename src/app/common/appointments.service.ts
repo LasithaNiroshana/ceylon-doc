@@ -24,7 +24,7 @@ export class AppointmentsService {
     return throwError(() => errorMessage);
   }
 
-   //Get payment history of a clinic
+   //Get appoinmtment history of a clinic
    public getAppointmentsClinic(cid:string,stdt:string,endt:string){
     const url = this.globalService.apiURL + 'admin_pet_appointment/' + '?cid=' + cid + '&stdt=' + stdt + '&endt=' + endt;
     
@@ -33,4 +33,14 @@ export class AppointmentsService {
 
     return this.httpClient.get(url, {headers}).pipe(catchError(this.handleError), timeout(this.globalService.tout));
   }
+
+  // //Get appointments of a clinic
+  // public getAppointmentsDoctor(cid:string){
+  //   const url = this.globalService.apiURL + 'pet_appointment/' + '?cid=' + cid;
+    
+  //   const headers = new HttpHeaders().set("Content-Type", "application/json")
+  //   .set("Authorization", "token " + this.globalService.token);
+
+  //   return this.httpClient.get(url, {headers}).pipe(catchError(this.handleError), timeout(this.globalService.tout));
+  // }
 }

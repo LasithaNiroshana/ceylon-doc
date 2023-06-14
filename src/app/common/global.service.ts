@@ -5,8 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalService {
   public apiURL: string = "https://drpawservices.life/";
-  public token=localStorage.getItem('token');
+  public token="";
   public tout = 30000;
+  public mb:string = "";
+  public name:string = ""
 
   constructor() { }
 }

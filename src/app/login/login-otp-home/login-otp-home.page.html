@@ -31,29 +31,24 @@
           />
         </div>
         <div class="mobile-box-text vertical-center-img">
-          <ion-input
+          
+          <form [formGroup]="loginOTPForm" autocomplete="on">
+            <ion-input
             type="tel"
             autocomplete="one-time-code"
             maxlength="6"
             placeholder="******"
             mask="******"
-            clearInput
+            formControlName="password"
             class="input-t1"
+            name="password"
+            (ngModelChange)="inputOnChange($event)"
+            clearInput
           ></ion-input>
-          <!-- <form [formGroup]="loginOTPForm" autocomplete="on">
-            <input id="single-factor-code-text-field" autocomplete="one-time-code" style="font-size: 22px; color: white">
-          </form> -->
-          <!-- <input appWebOtp placeholder="Enter OTP" style="font-size: 22px; color: white"/> -->
-          <!-- <input
-            type="text"
-            name="auth-token"
-            inputmode="numeric"
-            pattern="[0-9]*"
-            autocomplete="one-time-code" 
-            style="font-size: 22px; color: white"
-          /> -->
+          </form>
+          
         </div>
-        <div (click)="getOTP()" class="mobile-box-btn center-img">
+        <div (click)="loginUser()" class="mobile-box-btn center-img">
           <img
             src="{{login_img}}"
             cache-img="login_img"
@@ -66,7 +61,7 @@
     <ion-row class="margin-m2">
       <ion-col class="content-center ion-no-padding">
         <span class="content-t1 fc-black">Don't you get OTP?</span>
-        <span class="content-t1 fc-black"> <b>Try Again</b></span>
+        <span class="content-t1 fc-black" (click)="tryAgain()"> <b>Try Again</b></span>
         <span class="content-t1fc-black"> or </span>
         <span class="content-t1 fc-black"></span><b>Resend OTP</b>
       </ion-col>

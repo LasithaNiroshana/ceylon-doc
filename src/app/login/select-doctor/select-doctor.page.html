@@ -8,55 +8,46 @@
 
     <ion-row class="margin-m5">
       <ion-col class="content-center">
-        <label class="content-t1 fc-black"
-          >Please enter your registered Mobile Number to continue to your
-          account</label
-        >
+        <label class="content-t1 fc-black">Please select doctor to continue.</label>
       </ion-col>
     </ion-row>
 
     <ion-row class="center-img margin-m2">
       <form [formGroup]="loginForm">
         <div class="mobile-box">
-          <div class="mobile-box-icon center-img">
-            <img
-              src="{{country_img}}"
-              cache-img="country_img"
-              style="height: 3vh"
-            />
-          </div>
           <div class="mobile-box-text vertical-center-img">
             <!-- <ion-input></ion-input> -->
-            <ion-input
+            <!-- <ion-input
               class="input-t1"
               type="tel"
               maxlength="13"
-              placeholder="0701231234"
+              placeholder="(070)123-1234"
               mask="(***)***-****"
               formControlName="username"
-              (ngModelChange)="inputOnChange($event)"
+             
               clearInput
-            ></ion-input>
+            ></ion-input> -->
+            <ion-list>
+              <ion-item>
+                <ion-select aria-label="Doctors" interface="popover" placeholder="Choose Doctor">
+                  <ion-select-option value="Doc 1">Doc 1</ion-select-option>
+                  <ion-select-option value="Doc 2">Doc 2</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
           </div>
-          <div class="mobile-box-btn center-img" (click)="getOTP()">
+          <div class="mobile-box-btn center-img">
             <img
               src="{{login_img}}"
               cache-img="login_img"
               class="login-btn-icon"
+              (click)="navigateHome()"
             />
           </div>
         </div>
+        <!-- <ion-button >Continue</ion-button> -->
       </form>
     </ion-row>
-
-    <ion-row class="margin-m2">
-      <ion-col class="content-center">
-        <label class="content-t1 fc-black"
-          >Don’t have an account? <b>Register</b></label
-        >
-      </ion-col>
-    </ion-row>
-
     <!-- <br><br><br><br> -->
 
     <!-- <ion-row class="center-img" style="margin-top: 20vh;">

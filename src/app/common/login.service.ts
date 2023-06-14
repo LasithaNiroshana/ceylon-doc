@@ -54,4 +54,16 @@ export class LoginService {
 
     return this.httpClient.put(url, userID, {headers}).pipe(catchError(this.handleError), timeout(this.globalService.tout));
   }
+
+  //Get user details
+  public getUserInfo(mobile: string){
+    const url = this.globalService.apiURL + 'customer/';
+    
+    const params = new HttpParams().set('imid', mobile);
+
+    const headers = new HttpHeaders().set("Content-Type", "application/json")
+    .set("Authorization", "token " + this.globalService.token);
+
+    return this.httpClient.get(url, {params, headers}).pipe(catchError(this.handleError), timeout(this.globalService.tout));
+  }
 }

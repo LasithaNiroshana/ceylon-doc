@@ -35,6 +35,10 @@ const routes: Routes = [
         (m) => m.LoginOtpHomePageModule
       ),
   },
+  {
+    path: 'select-doctor',
+    loadChildren: () => import('./login/select-doctor/select-doctor.module').then( m => m.SelectDoctorPageModule)
+  },
 ];
 @NgModule({
   imports: [
