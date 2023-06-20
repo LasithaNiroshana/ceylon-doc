@@ -59,35 +59,23 @@ export class LoginMobileHomePage implements OnInit {
 
   trans_pre = 'drc';
 
-  // getOTP() {
-  //   this.router.navigate(['/login-otp-home']);
-  // }
-
   inputOnChange(event: any){
-    if(event.length == 10){
+    if(event && event.length == 10){
       this.getOTP();
     }
   }
 
-  // getOTP(){
-  //   this.username = this.loginForm.value.username;
-  //   this.loginService.getOTP(this.username).subscribe({
-  //     next:(res:any)=>{
-  //       console.log(res);
-  //     }
-  //   });
-  // }
-
   getOTP(){
     this.startLoader();
+    
 
     this.username = this.loginForm.value.username;
 
     this.loginService.getOTP(this.username).subscribe({
       next:(result:any)=>{
         if(result.success === 0){
-          this.globalService.mb = result.mobile;
-          this.globalService.name = result.name;
+          this.globalService.mb = this.username;
+          // this.globalService.name = this.username;
 
           this.loginForm.reset();
           this.router.navigate(['/login-otp-home']);

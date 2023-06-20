@@ -2,63 +2,35 @@
   <ion-grid class="h-100 login-block">
     <ion-row class="logo-row margin-m5">
       <ion-col class="content-center">
-        <label class="header-t1 fc-black"><b>Ceylon Doc</b></label>
+        <img src="../../../assets/CeylonDocLogo.png" cache-img="logo_img" style="height: 30vh;"/>
       </ion-col>
     </ion-row>
 
     <ion-row class="margin-m5">
       <ion-col class="content-center">
+        <label class="header-t1 fc-black"><b>Assistant</b></label>
+        <br><br>
         <label class="content-t1 fc-black">Please select doctor to continue.</label>
       </ion-col>
     </ion-row>
 
-    <ion-row class="center-img margin-m2">
-      <form [formGroup]="loginForm">
-        <div class="mobile-box">
-          <div class="mobile-box-text vertical-center-img">
-            <!-- <ion-input></ion-input> -->
-            <!-- <ion-input
-              class="input-t1"
-              type="tel"
-              maxlength="13"
-              placeholder="(070)123-1234"
-              mask="(***)***-****"
-              formControlName="username"
-             
-              clearInput
-            ></ion-input> -->
-            <ion-list>
-              <ion-item>
-                <ion-select aria-label="Doctors" interface="popover" placeholder="Choose Doctor">
-                  <ion-select-option value="Doc 1">Doc 1</ion-select-option>
-                  <ion-select-option value="Doc 2">Doc 2</ion-select-option>
-                </ion-select>
-              </ion-item>
-            </ion-list>
-          </div>
-          <div class="mobile-box-btn center-img">
-            <img
-              src="{{login_img}}"
-              cache-img="login_img"
-              class="login-btn-icon"
-              (click)="navigateHome()"
-            />
-          </div>
-        </div>
-        <!-- <ion-button >Continue</ion-button> -->
-      </form>
-    </ion-row>
-    <!-- <br><br><br><br> -->
+    <ion-col>
+      
+        <ion-card [class.clicked]="isCardClicked" *ngFor="let doctor of doctorList" (click)="selectDoctor(doctor.id)">
+          <ion-card-header>
+            <ion-card-title>Dr. {{doctor.name}} </ion-card-title>
+            <!-- <ion-card-subtitle>Name</ion-card-subtitle>
+            <ion-card-subtitle>Age</ion-card-subtitle> -->
+          </ion-card-header>
+          <!-- <ion-chip color="primary">
+            <ion-icon aria-hidden="true" name="call"></ion-icon>
+            &nbsp;
+            0714564568
+          </ion-chip>  -->
+        </ion-card>
+    <ion-button>
 
-    <!-- <ion-row class="center-img" style="margin-top: 20vh;">
-      <div class="call-box">
-        <div class="call-box-btn center-img">
-          <ion-icon style="font-size: 48px;" color="light" name="information"></ion-icon>
-        </div>
-        <div class="call-box-text">
-          <h5 class="fc-black">Having Trouble? Talk to Us!</h5>
-        </div>
-      </div>
-    </ion-row> -->
+    </ion-button>
+    </ion-col>
   </ion-grid>
 </ion-content>

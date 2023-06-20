@@ -242,8 +242,10 @@ export class LoginOtpHomePage implements OnInit {
   loginUser(){
     this.startLoader();
     // this.loginOTPForm.value.password = this.pincode;
-    this.loginOTPForm.value.username = "po-" + this.globalService.mb;
+    this.loginOTPForm.value.username = this.globalService.mb;
     this.username = this.loginOTPForm.value.username;
+
+    // console.log(this.globalService.mb);
 
     let record = this.loginOTPForm.value;
     this.loginService.getToken(record).subscribe({
@@ -271,11 +273,23 @@ export class LoginOtpHomePage implements OnInit {
   getInfo(){
     this.loginService.getUserInfo(this.globalService.mb).subscribe({
       next:(res:any)=>{
-        console.log(res);
-        this.loginOTPForm.reset();
-      this.router.navigate(['/tabs']);
 
-      this.dismissLoader();
+        var user=res[0];
+        // console.log(user);
+        this.globalService.name=user.name;
+        this.globalService.email=user.email;
+        this.globalService.clinic=user.clinic;
+        this.globalService.id=user.id;
+        this.globalService.address=user.address;
+        this.globalService.city=user.city;
+
+        this.loginOTPForm.reset();
+        
+      },
+      complete:()=>{
+        this.router.navigate(['/select-doctor']);
+        this.dismissLoader();
+        // console.log(this.globalService.clinic);
       },
       error:(err:any)=>{
           // console.log(err);
@@ -324,7 +338,7 @@ export class LoginOtpHomePage implements OnInit {
   }
 
   inputOnChange(event:any){
-    if(event.length == 6){
+    if(event && event.length == 6){
       this.loginUser();
     }
   }

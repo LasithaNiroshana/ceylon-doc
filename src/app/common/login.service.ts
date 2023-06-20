@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
 import { catchError, throwError, timeout } from 'rxjs';
-import {GlobalService} from '../common/global.service'
+import {GlobalService} from '../common/global.service';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,7 @@ export class LoginService {
   }
 
   public getOTP(mobile: string){
-    const url = this.globalService.apiURL + 'po_get_login_otp/';
+    const url = this.globalService.apiURL + 'get_login_otp/';
     
     const params = new HttpParams().set('lmid', mobile);
 
@@ -57,9 +57,9 @@ export class LoginService {
 
   //Get user details
   public getUserInfo(mobile: string){
-    const url = this.globalService.apiURL + 'customer/';
+    const url = this.globalService.apiURL + 'doctor_board/';
     
-    const params = new HttpParams().set('imid', mobile);
+    const params = new HttpParams().set('lmid', mobile);
 
     const headers = new HttpHeaders().set("Content-Type", "application/json")
     .set("Authorization", "token " + this.globalService.token);

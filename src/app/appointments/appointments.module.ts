@@ -8,7 +8,8 @@ import { AppointmentsPageRoutingModule } from './appointments-routing.module';
 
 import { AppointmentsPage } from './appointments.page';
 import {ComponentsModule} from '../components/components.module';
-import {MaterialModule} from '../material/material.module'
+import {MaterialModule} from '../material/material.module';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import {MaterialModule} from '../material/material.module'
     ComponentsModule,
     MaterialModule
   ],
-  declarations: [AppointmentsPage]
+  declarations: [AppointmentsPage],
+  providers:[DatePipe]
 })
 export class AppointmentsPageModule {}
